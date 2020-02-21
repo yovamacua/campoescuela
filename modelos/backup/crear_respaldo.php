@@ -53,14 +53,18 @@ foreach ($result as $row) {
 #asignacion de nombre archivo
 $filename = "Respaldo_" . date('Y_m_d_H_i_s') . ".sql";
 
-$fo = fopen("$filename", 'w');
+/* $fo = fopen("$filename", 'w');
 if (fwrite($fo, $dump)) {
     echo '<span style="color: green">' . "Base Datos Guardada Como $filename </span><br>" . "\n";
 
     fclose($fo);
 } else {
     echo "<span style=\"color: green\">Error al guardar</span>" . "\n";
-    fclose($fo);}
+    fclose($fo);} */
+
+$fo = fopen("$filename", 'w');
+fwrite($fo, $dump);
+fclose($fo);
 
 #generación de archivo para descargar
 header('Content-Description: File Transfer');
@@ -75,9 +79,3 @@ flush();
 readfile($filename);
 exec('rm ' . $filename);
 unlink($filename);
-
-$redireccion = Conectar::ruta() . "vistas/respaldo.php?msj=1";?>
-<script type="text/javascript">
-alert("Debe seleccionar una cuenta primero")
-self.location = '<?php echo $redireccion; ?>'
-</script>
