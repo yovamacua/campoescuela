@@ -1,0 +1,191 @@
+/*formato para mensajito flotante*/
+.testp{z-index: 1031 !important;position: fixed !important;
+ right: 15px; bottom: 1rem!important;}
+.testp .alert .close {padding-left: 1rem!important; }
+/*****/
+
+.notistyle{
+  background: #f14934; border-radius: 50%; padding: 0.5rem 1rem;
+}
+
+ 
+ul li.active>a {
+  background: #ecf0f547!important;
+}
+
+.treeview-menu>li.active>a {
+  background-color: #0073b7!important;
+  color: white!important;
+}
+
+.skin-blue .sidebar-menu .treeview-menu>li>a {
+  color: white!important;
+}
+
+.iconfix .glyphicon-folder-open {
+  padding-right: 1rem!important;
+}
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../plugins/BlockUI/loading.gif') 50% 50% no-repeat rgb(224, 224, 224);
+  opacity: .2;
+}
+
+thead tr th:last-child {
+  background: white!important;
+  pointer-events: none;
+}
+ 
+
+.content-header>.breadcrumb {
+  font-size: 15px!important;
+}
+
+.sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu>li.active:hover>a>span {
+  background: #5b6368;
+}
+
+.alert {
+  margin-bottom: 0px!important;
+}
+
+.boton-top {
+  width: 50%!important;
+  z-index: 1!important;
+}
+
+.boton-top button {
+  margin-left: 6px!important;
+}
+
+.tabla-top {
+  margin-top: -5rem!important;
+}
+
+.table-bordered>thead>tr>th,
+.table-bordered>thead>tr>td {
+  text-align: center!important;
+}
+
+.cbtns {
+  text-align: center!important;
+}
+
+/** clases collapsible de vista capacitacion **/
+.collapsible {
+  margin-left: 15px;
+}
+
+.contenedor {
+  display: none;
+  overflow: hidden;
+
+}
+
+.tabla-cap{
+  margin-top: -18px;
+}
+
+/*** media queries for responsive skin using bootstrap 3 ***/
+
+
+/* Small devices */
+@media (max-width: 320px) {
+
+  /** sumatoria partida **/
+  #sumtop{padding: 1rem!important;}
+
+  .boton-top{width: 100%!important;text-align: center!important;}
+
+  /*** vista usuarios **/
+  .tabla-top {
+    margin-top: 0rem!important;
+  }
+  /*** vista entrada **/
+  .loghide {
+    display: none!important;
+  }
+  .fixmobile {
+    width: 65%!important;
+  }
+  .addbottom {
+    z-index: 1!important;
+  }
+}
+
+
+/* Smartphones */
+@media (min-width: 321px) and (max-width: 480px) {
+
+    /** sumatoria partida **/
+  #sumtop{padding: 1rem!important;}
+
+  .boton-top{width: 100%!important;text-align: center!important;}
+
+  /*** vista usuarios **/
+  .tabla-top {
+    margin-top: 0rem!important;
+  }
+  /*** vista entrada **/
+  .loghide {
+    display: none!important;
+  }
+  .fixmobile {
+    width: 45%!important;
+  }
+  .addbottom {
+    z-index: 1!important;
+  }
+}
+
+
+/* Smartphones to Tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+
+    /** sumatoria partida **/
+  #sumtop{padding: 1rem!important;}
+
+  .boton-top{width: 100%!important;text-align: center!important;}
+  /*** vista usuarios **/
+  .tabla-top {
+    margin-top: 0rem!important;
+  }
+  /*** vista entrada **/
+  .loghide {
+    display: none!important;
+  }
+  .fixmobile {
+    width: 30%!important;
+  }
+  .addbottom {
+    z-index: 1!important;
+  }
+}
+
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 992px) {
+  /*** vista entrada **/
+  .loghide {
+    display: none!important;
+  }
+}
+
+
+/* Desktop */
+@media (min-width: 993px) and (max-width: 1199px) {
+  /*** vista entrada **/
+  .loghide {
+    display: none!important;
+  }
+}
+
+
+/* Large Display */
+@media (min-width: 1200px) {}
