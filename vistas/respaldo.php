@@ -36,7 +36,7 @@ function Generado() {
       Restaurar y Respaldar Base de Datos
       </h1>
         <ol class="breadcrumb">
-          <li><a href="home.php"><i class="fa fa-home"></i>Inicio</a></li>
+          <li><a href="home"><i class="fa fa-home"></i>Inicio</a></li>
           <li><i class="fa fa-database"></i> Respaldo</li>
         </ol>
       </section>
@@ -140,6 +140,6 @@ function Generado() {
       <?php
   } else {
     #redirecciona si la session no existe
-        header("Location:".Conectar::ruta()."vistas/index.php");
+        header("Location:".Conectar::ruta()."vistas/index");
   }
 ?>

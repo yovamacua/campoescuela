@@ -23,7 +23,7 @@
 
           <!-- migas de pan-->
           <ol class="breadcrumb">
-             <li><a href="home.php"><i class="fa fa-home"></i>Inicio</a></li>
+             <li><a href="home"><i class="fa fa-home"></i>Inicio</a></li>
              <li><i class="fa fa-users"></i> Categoría</li>
           </ol>
    
@@ -122,6 +122,6 @@
 <script type="text/javascript" src="js/categorias.js"></script>
 <?php
   } else {
-        header("Location:".Conectar::ruta()."vistas/index.php");
+        header("Location:".Conectar::ruta()."vistas/index");
   }
 ?>

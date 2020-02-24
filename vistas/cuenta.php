@@ -72,8 +72,8 @@ function recargar2(){
 
       <!--- migas de pan -->
       <ol class="breadcrumb">
-         <li><a href="home.php"><i class="fa fa-home"></i>Inicio</a></li>
-         <li><a href="partidas.php"><i class="fa fa-file-text-o"></i> Partidas</a></li>
+         <li><a href="home"><i class="fa fa-home"></i>Inicio</a></li>
+         <li><a href="partidas"><i class="fa fa-file-text-o"></i> Partidas</a></li>
          <li><i class="fa fa-clipboard"></i> Cuentas</li>
       </ol>
 
@@ -203,5 +203,5 @@ function recargar2(){
 <?php
    } else {
     #redirecciona si la session no existe
-         header("Location:".Conectar::ruta()."vistas/index.php");
+         header("Location:".Conectar::ruta()."vistas/index");
    }

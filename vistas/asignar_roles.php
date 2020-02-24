@@ -45,7 +45,7 @@
 
           <!-- migas de pan-->
           <ol class="breadcrumb">
-             <li><a href="home.php"><i class="fa fa-home"></i>Inicio</a></li>
+             <li><a href="home"><i class="fa fa-home"></i>Inicio</a></li>
              <li><i class="fa fa-users"></i> Roles</li>
           </ol>
    
@@ -162,6 +162,6 @@ $datos=$usuarios->get_usuario_por_id($identificador);
 <script type="text/javascript" src="js/asignar_roles.js"></script>
 <?php
   } else {
-        header("Location:".Conectar::ruta()."vistas/index.php");
+        header("Location:".Conectar::ruta()."vistas/index");
   }
 ?>

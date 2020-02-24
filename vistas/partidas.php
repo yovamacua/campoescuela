@@ -48,7 +48,7 @@ function recargar(){
 
     <!-- migas de pan-->
       <ol class="breadcrumb">
-         <li><a href="home.php"><i class="fa fa-home"></i>Inicio</a></li>
+         <li><a href="home"><i class="fa fa-home"></i>Inicio</a></li>
          <li><i class="fa fa-file-text-o"></i> Partidas</li>
       </ol>
    
@@ -196,5 +196,5 @@ function recargar(){
 <?php
 } else {
   #redirecciona si sessión no existe
-header("Location:".Conectar::ruta()."vistas/index.php");
+header("Location:".Conectar::ruta()."vistas/index");
 }

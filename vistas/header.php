@@ -143,7 +143,7 @@
       <?php
          } else {
           #redireccion si la sessión no existe
-            header("Location:".Conectar::ruta()."vistas/index.php");
+            header("Location:".Conectar::ruta()."vistas/index");
             exit();
           }
 

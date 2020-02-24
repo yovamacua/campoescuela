@@ -157,9 +157,9 @@ $(function resolucion() {
       </h1>
 
       <ol class="breadcrumb">
-        <li><a href="home.php"><i class="fa fa-home"></i>Inicio</a></li>
-        <li><a href="partidas.php"><i class="fa fa-file-text-o"></i> Partidas</a></li>
-        <li><a href="cuenta.php?id=<?php echo $_SESSION["seleccion_partida"]; ?>&partida=<?php echo $_SESSION["nombre_partida"]; ?>"><i class="fa fa-clipboard"></i> Cuentas</a></li>
+        <li><a href="home"><i class="fa fa-home"></i>Inicio</a></li>
+        <li><a href="partidas"><i class="fa fa-file-text-o"></i> Partidas</a></li>
+        <li><a href="cuenta?id=<?php echo $_SESSION["seleccion_partida"]; ?>&partida=<?php echo $_SESSION["nombre_partida"]; ?>"><i class="fa fa-clipboard"></i> Cuentas</a></li>
         <li><i class="fa fa-list-alt"></i> Detalle de cuenta</li>
       </ol>
 
@@ -422,6 +422,6 @@ bootbox.confirm("¿Está Seguro de eliminar este registro?", function(result) {
 
 <?php
   } else {
-        header("Location:".Conectar::ruta()."vistas/index.php");
+        header("Location:".Conectar::ruta()."vistas/index");
   }
 ?>

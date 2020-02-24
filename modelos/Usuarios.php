@@ -5,7 +5,7 @@ require_once "../config/conexion.php";
 #valida que exista la sessión
 /*if (!isset($_SESSION['id_usuario'])) {?>
         <script type="text/javascript">
-        window.location="../vistas/home.php";
+        window.location="../vistas/home";
         </script>
     <?php
 }*/
@@ -38,7 +38,7 @@ class Usuarios extends Conectar
 
             // valida si los campos son enviados vacios o no corresponden al formato correcto
             if (empty($correo) or empty($password) or $vl1 != 0) {
-                header("Location:" . Conectar::ruta() . "vistas/index.php?m=2");
+                header("Location:" . Conectar::ruta() . "vistas/index?m=2");
                 exit();
             } else {
                 $sql = "select * from usuarios where correo=? or usuario=? and password=? and estado=?";
@@ -111,11 +111,11 @@ $encriptar1 = crypt($password, '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
       //FIN PERMISOS DEL USUARIO
 
      
-                    header("Location:" . Conectar::ruta() . "vistas/home.php");
+                    header("Location:" . Conectar::ruta() . "vistas/home");
                     exit();
                 } else {
                     //si no existe los datos del usuario le aparece un mensaje y redirecciona al home
-                    header("Location:" . Conectar::ruta() . "vistas/index.php?m=1");
+                    header("Location:" . Conectar::ruta() . "vistas/index?m=1");
                     exit();
                 }
             } //cierre del else

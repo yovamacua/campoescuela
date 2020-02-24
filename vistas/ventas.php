@@ -33,7 +33,7 @@
 
           <!-- migas de pan-->
           <ol class="breadcrumb">
-             <li><a href="home.php"><i class="fa fa-home"></i>Inicio</a></li>
+             <li><a href="home"><i class="fa fa-home"></i>Inicio</a></li>
              <li><i class="fa fa-usd"></i>Venta</li>
           </ol>    
           </section>    
@@ -222,7 +222,7 @@
    
    } else {
 
-         header("Location:".Conectar::ruta()."vistas/index.php");
+         header("Location:".Conectar::ruta()."vistas/index");
 
      }
 
