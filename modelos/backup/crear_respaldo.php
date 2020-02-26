@@ -6,7 +6,7 @@ require_once "../../config/conexion.php";
 #valida que exista la session
 if (!isset($_SESSION['id_usuario'])) {?>
         <script type="text/javascript">
-        window.location="../vistas/home";
+        window.location="../vistas/inicio";
         </script>
     <?php
 }

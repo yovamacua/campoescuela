@@ -5,7 +5,7 @@ require_once "../config/conexion.php";
 #valida que exista la sessión
 /*if (!isset($_SESSION['id_usuario'])) {?>
         <script type="text/javascript">
-        window.location="../vistas/home";
+        window.location="../vistas/inicio";
         </script>
     <?php
 }*/
@@ -111,10 +111,10 @@ $encriptar1 = crypt($password, '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
       //FIN PERMISOS DEL USUARIO
 
      
-                    header("Location:" . Conectar::ruta() . "vistas/home");
+                    header("Location:" . Conectar::ruta() . "vistas/inicio");
                     exit();
                 } else {
-                    //si no existe los datos del usuario le aparece un mensaje y redirecciona al home
+                    //si no existe los datos del usuario le aparece un mensaje y redirecciona al inicio
                     header("Location:" . Conectar::ruta() . "vistas/index?m=1");
                     exit();
                 }

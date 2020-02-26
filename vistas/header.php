@@ -88,7 +88,7 @@
       <div class="wrapper">
       <header class="main-header">
          <!-- Logo -->
-         <a href="home" class="logo">
+         <a href="inicio" class="logo">
             <!-- Mini logo -->
             <span class="logo-mini"><b>C.E</b></span>
 

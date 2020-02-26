@@ -40,7 +40,7 @@ require_once("header.php");?>
       
       <!-- migas de pan -->
       <ol class="breadcrumb">
-         <li><a href="home"><i class="fa fa-home"></i>Inicio</a></li>
+         <li><a href="inicio"><i class="fa fa-inicio"></i>Inicio</a></li>
          <li><i class="fa fa-file-text"></i> Reportes V/P por M/A</li>
       </ol>
 

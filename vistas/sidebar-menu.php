@@ -12,9 +12,9 @@
 
          <li class="header">MENU</li>
 
-         <li <?php if(isset($activar) and $activar == 'item_home'){?>class="active"<?php }else{?> class=""<?php }?> >
-            <a href="home">
-            <i class="fa fa-home" aria-hidden="true"></i> <span>Inicio</span>
+         <li <?php if(isset($activar) and $activar == 'item_inicio'){?>class="active"<?php }else{?> class=""<?php }?> >
+            <a href="inicio">
+            <i class="fa fa-inicio" aria-hidden="true"></i> <span>Inicio</span>
             </a>
          </li>
 
