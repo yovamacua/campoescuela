@@ -8,7 +8,7 @@
    require_once("../modelos/Roles.php");
  if (!isset($_SESSION['id_usuario'])) {?>
         <script type="text/javascript">
-        window.location="../vistas/inicio";
+        window.location="../vistas/inicio.php";
         </script>
     <?php
 }
@@ -95,7 +95,7 @@ foreach($rol as $rows){
               $valores[]= $rows["codigo"];
           }
  	 $data= Array();
-
+  $dolar="$ ";
     	foreach ($datos as $row) {
  			$sub_array = array();
        if($row["estado"] == 1){
@@ -124,9 +124,9 @@ foreach($rol as $rows){
      
          
                  $sub_array[] = $row["usuario"];
-                   $sub_array[] = $row["fechaventa"];
+                   $sub_array[] = date("d-m-Y", strtotime($row["fechaventa"]));
                  $sub_array[] = $row["numero_venta"];
-                 $sub_array[] = $row["total_pagar"];
+                 $sub_array[] = $dolar.$row["total_pagar"];
               
 	       
              $sub_array[] =$atrib;
@@ -238,7 +238,7 @@ if (isset($messages)){
          $sub_array[] = $row["vendedor"];
          $sub_array[] = $row["total_pagar"];
          $sub_array[] = $row["numero_venta"];
-         $sub_array[] = date("d-m-Y",strtotime($row["fechaventa"]));
+         $sub_array[] = date("d/m/Y",strtotime($row["fechaventa"]));
 
            /*IMPORTANTE: poner \' cuando no sea numero, sino no imprime*/
                  $sub_array[] = '<button type="button" onClick="cambiarEstado('.$row["idventas"].',\''.$row["numero_venta"].'\','.$row["estado"].');" name="estado" id="'.$row["idventas"].'" class="'.$atrib.'">'.$est.'</button>';
@@ -292,7 +292,7 @@ if (isset($messages)){
          $sub_array[] = $row["vendedor"];
          $sub_array[] = $row["total_pagar"];
          $sub_array[] = $row["numero_venta"];
-         $sub_array[] = date("d-m-Y", strtotime($row["fechaventa"]));
+         $sub_array[] = date("d/m/Y", strtotime($row["fechaventa"]));
            /*IMPORTANTE: poner \' cuando no sea numero, sino no imprime*/
                  $sub_array[] = '<button type="button" onClick="cambiarEstado('.$row["idventas"].',\''.$row["numero_venta"].'\','.$row["estado"].');" name="estado" id="'.$row["idventas"].'" class="'.$atrib.'">'.$est.'</button>';
                 
@@ -313,6 +313,7 @@ if (isset($messages)){
      case "mostrar":
      //selecciona del incidente
   //el parametro id_incidente se envia por AJAX cuando se edita la categoria
+
   $datos=$venta->Mostrar($_POST["idventas"]);
           // si existe el id del incidnete entonces recorre el array
         if(is_array($datos)==true and count($datos)>0){
@@ -346,6 +347,7 @@ if (isset($messages)){
             }
           //fin de mensaje de error
    break;
+   
    case "listarDetalle":
      //selecciona del incidente
      $id=$_GET['id'];
@@ -370,8 +372,8 @@ if (isset($messages)){
         $html.="'<tr>
       '<td>".$row['producto']."</td>'+
       '<td>".$row['cantidad']."</td>'+
-      '<td>".$row['precio_venta']."</td>'+
-      '<td>".$subtotal."</td>'
+      '<td>$ ".$row['precio_venta']."</td>'+
+      '<td>$ ".$subtotal."</td>'
       '</tr>'";
         $total= $total+$subtotal;
             }
@@ -381,8 +383,8 @@ if (isset($messages)){
                                     <th></th>
                                     <th></th>
                                     
-                                    <th>$/'.$total.'</th> 
-                                </tfoot';
+                                    <th>$ '.$total.'</th> 
+                                </tfoot>';
                                     echo $html;
                                
           } else {

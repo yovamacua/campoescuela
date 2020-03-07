@@ -10,6 +10,7 @@
 
 <?php
   #variable item activo
+  $activar = 'item_permiso';
   $activar1 = 'item_permiso1';
   require_once("header.php");
 ?>
@@ -26,7 +27,7 @@
 
           <!-- migas de pan-->
           <ol class="breadcrumb">
-             <li><a href="inicio"><i class="fa fa-inicio"></i>Inicio</a></li>
+             <li><a href="inicio.php"><i class="fa fa-home"></i>Inicio</a></li>
              <li><i class="fa fa-users"></i>Perfil</li>
           </ol>
    
@@ -137,6 +138,6 @@
 <script type="text/javascript" src="js/perfiles.js"></script>
 <?php
   } else {
-        header("Location:".Conectar::ruta()."vistas/index");
+        header("Location:".Conectar::ruta()."vistas/index.php");
   }
 ?>

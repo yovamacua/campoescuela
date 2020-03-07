@@ -6,7 +6,8 @@
 ?>
 <?php
   #variable item activo
-  $activar2 = 'item_unidad';
+ $activar = 'item_categorias';
+  $activar2 = 'item_categorias2';
   require_once("header.php");
 ?>
 <?php if($_SESSION["PERMISO"]==1)
@@ -23,7 +24,7 @@
 
           <!-- migas de pan-->
           <ol class="breadcrumb">
-             <li><a href="inicio"><i class="fa fa-inicio"></i>Inicio</a></li>
+             <li><a href="inicio.php"><i class="fa fa-home"></i>Inicio</a></li>
              <li><i class="fa fa-users"></i> Unidad</li>
           </ol>
    
@@ -94,7 +95,7 @@
 
 
           <label>Descripción</label>
-          <input type="text" name="descripcion" id="descripcion" class="form-control" placeholder="Descripcion" maxlength="50" required=""/>
+          <textarea rows="4" maxlength="50" style=" word-break: break-all;    max-width: 100% !important;" cols="250" name="descripcion" id="descripcion" class="form-control" placeholder="Descripción" required/></textarea>
           <span class="error_form" id="error_descripcion"></span>
           <br />
 
@@ -122,6 +123,6 @@
 <script type="text/javascript" src="js/unidads.js"></script>
 <?php
   } else {
-        header("Location:".Conectar::ruta()."vistas/index");
+        header("Location:".Conectar::ruta()."vistas/index.php");
   }
 ?>
