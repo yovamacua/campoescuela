@@ -375,6 +375,9 @@ function agregarDetalle(id_producto,producto,precio_venta,stock)
   	detalles=detalles-1;
   	evaluar()
   }
+    function ocultar(id){
+document.getElementById('btn' + id).style.display = 'none';
+}
 	//la funcion guardaryeditar(e); se llama cuando se da click al boton submit
 function guardaryeditar(e)
 {
@@ -406,8 +409,9 @@ function guardaryeditar(e)
 		         console.log(datos);
 	            $('#formulario')[0].reset();
 				$('#ventas_data').DataTable().ajax.reload(null, false);
-
+              
                 limpiar();
+                window.location.replace("ventas.php");
 
 		    }
 

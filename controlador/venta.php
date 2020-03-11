@@ -171,7 +171,7 @@ if (isset($messages)){
       case  'listarProductoVenta':
    $datos=$productos->get_productos();
    $data= Array();
-
+   $cont=1;
      foreach($datos as $row){
  $sub_array = array();
       if($row["stock"]<=1){
@@ -185,7 +185,7 @@ if (isset($messages)){
 
              $stock = $row["stock"];
                      $atributo = "badge bg-green";
-                      $sub_array[] = ' <button class="btn btn-warning" onclick="agregarDetalle('.$row["id_producto"].',\''.$row["producto"].'\','.$row["precio_venta"]. ','.$row["stock"].')" <span class="fa fa-plus">+</span></button>';
+                      $sub_array[] = ' <button class="btn btn-warning"  id="btn'.$cont.'" onclick="agregarDetalle('.$row["id_producto"].',\''.$row["producto"].'\','.$row["precio_venta"]. ','.$row["stock"].')" <span class="fa fa-plus">+</span></button>';
                    }
     
     

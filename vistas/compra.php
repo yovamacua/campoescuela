@@ -69,7 +69,7 @@
                     <input type="text" class="form-control" id="nombre" name="nombre"  style="width:50%;" value="<?php echo $_SESSION["nombre"];?>" readonly/>
                   </div>
               </div>   
-              <div class="form-group">
+              <div class="form-group table-responsive">
                      <label for="" class="col-lg-3 control-label">Fecha(*)</label>
 
                   <div class="col-lg-9">
