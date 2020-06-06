@@ -177,15 +177,15 @@
                 </br>
                   <div class="form-group col-md-6">
                   <label>Stock</label>
-                    <input  type="text" class="form-control " id="stock" name="stock" maxlength="4" autocomplete="off" required/>
+                    <input  type="text" class="form-control " id="stock" name="stock" maxlength="5" autocomplete="off" required/>
                      <span class="error_form" id="error_stock"></span>
                    </div>
                  </div>
                </br>
-             <div class="form-row">
+               <div class="form-row">
                 <div class="form-group col-md-12 ofield">
                <label>Stock nuevo</label>
-                    <input   type="text" class="form-control " id="stock1" name="stock1" maxlength="4" autocomplete="off" value="0"/>
+                    <input   type="text" class="form-control " id="stock1" name="stock1" maxlength="5" autocomplete="off" value="0"/>
                      <span class="error_form" id="error_stock1"></span>
                
              </div>
@@ -201,7 +201,8 @@
           <button type="button" onclick="limpiar()" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cerrar</button>
            </div><!--modal-footer-->
       </div>
-      </form>
+     </div>
+   </form>
   </div>
 </div>
  <!--FIN FORMULARIO VENTANA MODAL-->

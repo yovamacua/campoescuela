@@ -201,6 +201,8 @@ function listar()
 
 	}).DataTable();
 }
+
+
 //Función Listar
 function listarProductoVenta()
 {
@@ -286,7 +288,7 @@ function agregarDetalle(id_producto,producto,precio_venta,stock)
     	'<td><button type="button" class="btn btn-danger" onclick="eliminarDetalle('+cont+')">X</button></td>'+
     	'<td><input type="hidden"  name="id_producto[]" value="'+id_producto+'">'+producto+'</td>'+
     	'<td><input type="text" maxlength="5"  style="WIDTH: 58px; text-align: center" name="stock[]" id="stock[]" value="'+stock+' " readonly></td>'+
-    	'<td><input type="number" maxlength="5"  style="WIDTH: 58px; text-align: center" onchange="modificarSubototales()" name="cantidad[]" id="cantidad[]" value="'+cantidad+'" min="0" max="1000"></td>'+
+    	'<td><input type="number" step="any"  maxlength="5"  style="WIDTH: 58px; text-align: center" onchange="modificarSubototales()" name="cantidad[]" id="cantidad[]" value="'+cantidad+'" min="0" max="1000"></td>'+
     	'<td><input type="text"  maxlength="5"  style="WIDTH: 58px; text-align: center" name="precio_venta[]" id="precio_venta[]" value="'+precio_venta+' " readonly/></td>'+
     	'<td><span name="subtotal" id="subtotal'+cont+'">'+subtotal+'</span></td>'+
     	'</tr>';
@@ -303,6 +305,12 @@ function agregarDetalle(id_producto,producto,precio_venta,stock)
     	alert("Error al ingresar el detalle, revisar los datos del producto");
     }
   }
+
+  function ocultar(id){
+document.getElementById('btn' + id).style.display = 'none';
+}
+
+
   function modificarSubototales()
   {
     var stock = document.getElementsByName("stock[]");  	
@@ -375,9 +383,6 @@ function agregarDetalle(id_producto,producto,precio_venta,stock)
   	detalles=detalles-1;
   	evaluar()
   }
-    function ocultar(id){
-document.getElementById('btn' + id).style.display = 'none';
-}
 	//la funcion guardaryeditar(e); se llama cuando se da click al boton submit
 function guardaryeditar(e)
 {
@@ -409,7 +414,7 @@ function guardaryeditar(e)
 		         console.log(datos);
 	            $('#formulario')[0].reset();
 				$('#ventas_data').DataTable().ajax.reload(null, false);
-              
+
                 limpiar();
                 window.location.replace("ventas.php");
 
